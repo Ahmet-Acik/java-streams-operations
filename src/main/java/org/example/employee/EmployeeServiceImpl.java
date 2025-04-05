@@ -86,5 +86,11 @@ public class EmployeeServiceImpl implements EmployeeService {
                 .collect(Collectors.groupingBy(Employee::getDepartment));
     }
 
+    @Override
+    public Map<Boolean, List<Employee>> partitionBySalary(List<Employee> employees, double threshold) {
+        return employees.stream()
+                .collect(Collectors.partitioningBy(employee -> employee.getSalary() > threshold));
+    }
+
 
 }
