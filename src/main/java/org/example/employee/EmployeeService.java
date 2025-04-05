@@ -19,5 +19,5 @@ public interface EmployeeService {
     Map<Boolean, List<Employee>> partitionBySalary(List<Employee> employees, double threshold);
     Optional<Employee> findMaxSalary(List<Employee> employees);
     Optional<Employee> findMinSalary(List<Employee> employees);
-//    Map<String, Employee> collectToMap(List<Employee> employees);
+    Map<String, Employee> collectToMap(List<Employee> employees);
 }

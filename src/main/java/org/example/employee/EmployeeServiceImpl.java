@@ -98,11 +98,15 @@ public class EmployeeServiceImpl implements EmployeeService {
                 .max((e1, e2) -> Double.compare(e1.getSalary(), e2.getSalary()));
     }
 
-
     @Override
     public Optional<Employee> findMinSalary(List<Employee> employees) {
         return employees.stream()
                 .min((e1, e2) -> Double.compare(e1.getSalary(), e2.getSalary()));
     }
 
+    @Override
+    public Map<String, Employee> collectToMap(List<Employee> employees) {
+        return employees.stream()
+                .collect(Collectors.toMap(Employee::getId, employee -> employee));
+    }
 }
