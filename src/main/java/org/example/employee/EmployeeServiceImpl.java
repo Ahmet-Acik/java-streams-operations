@@ -99,4 +99,10 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
 
+    @Override
+    public Optional<Employee> findMinSalary(List<Employee> employees) {
+        return employees.stream()
+                .min((e1, e2) -> Double.compare(e1.getSalary(), e2.getSalary()));
+    }
+
 }
