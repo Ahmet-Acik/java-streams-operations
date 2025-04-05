@@ -50,6 +50,7 @@ public class Main {
         System.out.println("Group by department: " + employeeService.groupByDepartment(employees));
         System.out.println("Partition by salary > 80000: " + employeeService.partitionBySalary(employees, 80000));
         System.out.println("Employee with max salary: " + employeeService.findMaxSalary(employees));
+        System.out.println("Employee with min salary: " + employeeService.findMinSalary(employees));
 
     }
 }
