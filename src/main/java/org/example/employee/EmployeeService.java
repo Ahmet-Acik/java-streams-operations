@@ -16,8 +16,8 @@ public interface EmployeeService {
     long countByLocation(List<Employee> employees, Location location);
     List<Employee> distinctByLocation(List<Employee> employees);
     Map<Department, List<Employee>> groupByDepartment(List<Employee> employees);
-    Map<Boolean, List<Employee>> partitionBySalary(List<Employee> employees, double threshold);
-    Optional<Employee> findMaxSalary(List<Employee> employees);
-    Optional<Employee> findMinSalary(List<Employee> employees);
-    Map<String, Employee> collectToMap(List<Employee> employees);
+//    Map<Boolean, List<Employee>> partitionBySalary(List<Employee> employees, double threshold);
+//    Optional<Employee> findMaxSalary(List<Employee> employees);
+//    Optional<Employee> findMinSalary(List<Employee> employees);
+//    Map<String, Employee> collectToMap(List<Employee> employees);
 }

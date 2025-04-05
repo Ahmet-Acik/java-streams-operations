@@ -1,6 +1,7 @@
 package org.example.employee;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -79,4 +80,11 @@ public class EmployeeServiceImpl implements EmployeeService {
                         map -> map.values().stream().collect(Collectors.toList())
                 ));
     }
+    @Override
+    public Map<Department, List<Employee>> groupByDepartment(List<Employee> employees) {
+        return employees.stream()
+                .collect(Collectors.groupingBy(Employee::getDepartment));
+    }
+
+
 }
