@@ -8,12 +8,12 @@ public class Employee {
     private final int age;
     private final String gender;
     private final String address;
-    private final String department;
+    private final Department department;
     private final double salary;
-    private final String location;
-    private final List<String> projects;
+    private final Location location;
+    private final List<Project> projects;
 
-    public Employee(String id, String name, int age, String gender, String address, String department, double salary, String location, List<String> projects) {
+    public Employee(String id, String name, int age, String gender, String address, Department department, double salary, Location location, List<Project> projects) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -45,7 +45,7 @@ public class Employee {
         return address;
     }
 
-    public String getDepartment() {
+    public Department getDepartment() {
         return department;
     }
 
@@ -53,11 +53,11 @@ public class Employee {
         return salary;
     }
 
-    public String getLocation() {
+    public Location getLocation() {
         return location;
     }
 
-    public List<String> getProjects() {
+    public List<Project> getProjects() {
         return projects;
     }
 
