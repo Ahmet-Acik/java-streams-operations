@@ -92,5 +92,11 @@ public class EmployeeServiceImpl implements EmployeeService {
                 .collect(Collectors.partitioningBy(employee -> employee.getSalary() > threshold));
     }
 
+    @Override
+    public Optional<Employee> findMaxSalary(List<Employee> employees) {
+        return employees.stream()
+                .max((e1, e2) -> Double.compare(e1.getSalary(), e2.getSalary()));
+    }
+
 
 }
