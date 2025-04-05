@@ -47,6 +47,7 @@ public class Main {
         System.out.println("Average salary by department (Engineering): " + employeeService.averageSalaryByDepartment(employees, Department.ENGINEERING));
         System.out.println("Count by location (New York): " + employeeService.countByLocation(employees, Location.NEW_YORK));
         System.out.println("Distinct by location: " + employeeService.distinctByLocation(employees));
+        System.out.println("Group by department: " + employeeService.groupByDepartment(employees));
 
     }
 }
