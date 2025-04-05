@@ -42,5 +42,11 @@ public class Main {
         System.out.println("Sorted by name: " + employeeService.sortByName(employees));
         System.out.println("Sum of salaries: " + employeeService.sumOfSalaries(employees));
 
+        System.out.println("Filtered by department (Engineering): " + employeeService.filterByDepartment(employees, Department.ENGINEERING));
+        System.out.println("Filtered by project (Cloud Migration): " + employeeService.filterByProject(employees, Project.CLOUD_MIGRATION));
+        System.out.println("Average salary by department (Engineering): " + employeeService.averageSalaryByDepartment(employees, Department.ENGINEERING));
+        System.out.println("Count by location (New York): " + employeeService.countByLocation(employees, Location.NEW_YORK));
+        System.out.println("Distinct by location: " + employeeService.distinctByLocation(employees));
+
     }
 }
