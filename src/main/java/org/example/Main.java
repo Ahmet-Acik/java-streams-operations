@@ -39,5 +39,8 @@ public class Main {
         System.out.println("Names: " + employeeService.getNames(employees));
         System.out.println("First employee in New York: " + employeeService.findFirstByLocation(employees, Location.NEW_YORK));
 
+        System.out.println("Sorted by name: " + employeeService.sortByName(employees));
+        System.out.println("Sum of salaries: " + employeeService.sumOfSalaries(employees));
+
     }
 }
