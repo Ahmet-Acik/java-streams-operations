@@ -36,7 +36,8 @@ public class Main {
         EmployeeService employeeService = new EmployeeServiceImpl();
 
         System.out.println("Filtered by age > 30: " + employeeService.filterByAge(employees, 30));
-
+        System.out.println("Names: " + employeeService.getNames(employees));
+        System.out.println("First employee in New York: " + employeeService.findFirstByLocation(employees, Location.NEW_YORK));
 
     }
 }
