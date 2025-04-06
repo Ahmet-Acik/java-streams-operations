@@ -53,6 +53,5 @@ public class Main {
         System.out.println("Employee with min salary: " + employeeService.findMinSalary(employees));
         System.out.println("Collect to map: " + employeeService.collectToMap(employees));
 
-
     }
 }

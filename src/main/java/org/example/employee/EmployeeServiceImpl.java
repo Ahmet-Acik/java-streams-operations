@@ -118,4 +118,11 @@ public class EmployeeServiceImpl implements EmployeeService {
                 .collect(Collectors.toList());
     }
 
+    @Override
+    public Map<Location, Double> averageSalaryByLocation(List<Employee> employees) {
+        return employees.stream()
+                .collect(Collectors.groupingBy(Employee::getLocation,
+                        Collectors.averagingDouble(Employee::getSalary)));
+    }
+
 }

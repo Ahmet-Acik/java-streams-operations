@@ -21,7 +21,7 @@ public interface EmployeeService {
     Optional<Employee> findMinSalary(List<Employee> employees);
     Map<String, Employee> collectToMap(List<Employee> employees);
     List<Employee> filterByGender(List<Employee> employees, String gender);
-//    Map<Location, Double> averageSalaryByLocation(List<Employee> employees);
+    Map<Location, Double> averageSalaryByLocation(List<Employee> employees);
 //    List<Employee> findByAddress(List<Employee> employees, String address);//
 //    List<Employee> findByName(List<Employee> employees, String name);
 //    List<Employee> findByDepartment(List<Employee> employees, Department department);
