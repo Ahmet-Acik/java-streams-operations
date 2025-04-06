@@ -160,7 +160,12 @@ public class EmployeeServiceImpl implements EmployeeService {
                 .collect(Collectors.toList());
     }
 
-
+    @Override
+    public List<Employee> findByProject(List<Employee> employees, Project project) {
+        return employees.stream()
+                .filter(employee -> employee.getProjects().contains(project))
+                .collect(Collectors.toList());
+    }
 
 
     @Override
