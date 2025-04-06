@@ -132,5 +132,10 @@ public class EmployeeServiceImpl implements EmployeeService {
                 .collect(Collectors.toList());
     }
 
-
+    @Override
+    public List<Employee> findByName(List<Employee> employees, String name) {
+        return employees.stream()
+                .filter(employee -> employee.getName().equalsIgnoreCase(name))
+                .collect(Collectors.toList());
+    }
 }
