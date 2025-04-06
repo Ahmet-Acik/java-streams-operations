@@ -125,4 +125,12 @@ public class EmployeeServiceImpl implements EmployeeService {
                         Collectors.averagingDouble(Employee::getSalary)));
     }
 
+    @Override
+    public List<Employee> findByAddress(List<Employee> employees, String address) {
+        return employees.stream()
+                .filter(employee -> employee.getAddress().equalsIgnoreCase(address))
+                .collect(Collectors.toList());
+    }
+
+
 }
