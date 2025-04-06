@@ -32,16 +32,13 @@ public class Main {
                 new Employee("20", "Tina Turner", 30, "Female", "1717 Poplar St", Department.IT, 89000, Location.CHICAGO, Arrays.asList(Project.AI_RESEARCH))
         );
 
-
         EmployeeService employeeService = new EmployeeServiceImpl();
 
         System.out.println("Filtered by age > 30: " + employeeService.filterByAge(employees, 30));
         System.out.println("Names: " + employeeService.getNames(employees));
         System.out.println("First employee in New York: " + employeeService.findFirstByLocation(employees, Location.NEW_YORK));
-
         System.out.println("Sorted by name: " + employeeService.sortByName(employees));
         System.out.println("Sum of salaries: " + employeeService.sumOfSalaries(employees));
-
         System.out.println("Filtered by department (Engineering): " + employeeService.filterByDepartment(employees, Department.ENGINEERING));
         System.out.println("Filtered by project (Cloud Migration): " + employeeService.filterByProject(employees, Project.CLOUD_MIGRATION));
         System.out.println("Average salary by department (Engineering): " + employeeService.averageSalaryByDepartment(employees, Department.ENGINEERING));
@@ -52,6 +49,16 @@ public class Main {
         System.out.println("Employee with max salary: " + employeeService.findMaxSalary(employees));
         System.out.println("Employee with min salary: " + employeeService.findMinSalary(employees));
         System.out.println("Collect to map: " + employeeService.collectToMap(employees));
-
+        System.out.println("Filtered by gender (Female): " + employeeService.filterByGender(employees, "Female"));
+        System.out.println("Average salary by location: " + employeeService.averageSalaryByLocation(employees));
+        System.out.println("Find by address (123 Main St): " + employeeService.findByAddress(employees, "123 Main St"));
+        System.out.println("Find by name (Alice Johnson): " + employeeService.findByName(employees, "Alice Johnson"));
+        System.out.println("Find by salary range (60000 to 90000): " + employeeService.findBySalaryRange(employees, 60000, 90000));
+        System.out.println("Find by age range (25 to 35): " + employeeService.findByAgeRange(employees, 25, 35));
+        System.out.println("Find by location and department (New York, Engineering): " + employeeService.findByLocationAndDepartment(employees, Location.NEW_YORK, Department.ENGINEERING));
+        System.out.println("Find by location and salary (New York, 60000 to 90000): " + employeeService.findByLocationAndSalary(employees, Location.NEW_YORK, 60000, 90000));
+        System.out.println("Find by location and age (New York, 25 to 35): " + employeeService.findByLocationAndAge(employees, Location.NEW_YORK, 25, 35));
+        System.out.println("Find by department (Engineering): " + employeeService.findByDepartment(employees, Department.ENGINEERING));
+        System.out.println("Find by project (Cloud Migration): " + employeeService.findByProject(employees, Project.CLOUD_MIGRATION));
     }
 }
