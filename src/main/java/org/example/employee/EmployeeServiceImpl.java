@@ -80,6 +80,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                         map -> map.values().stream().collect(Collectors.toList())
                 ));
     }
+
     @Override
     public Map<Department, List<Employee>> groupByDepartment(List<Employee> employees) {
         return employees.stream()
@@ -109,4 +110,12 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employees.stream()
                 .collect(Collectors.toMap(Employee::getId, employee -> employee));
     }
+
+    @Override
+    public List<Employee> filterByGender(List<Employee> employees, String gender) {
+        return employees.stream()
+                .filter(employee -> employee.getGender().equalsIgnoreCase(gender))
+                .collect(Collectors.toList());
+    }
+
 }
