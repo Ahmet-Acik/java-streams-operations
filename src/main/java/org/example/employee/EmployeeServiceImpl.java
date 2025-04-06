@@ -154,4 +154,14 @@ public class EmployeeServiceImpl implements EmployeeService {
                 .filter(employee -> employee.getAge() >= minAge && employee.getAge() <= maxAge)
                 .collect(Collectors.toList());
     }
+
+
+
+
+    @Override
+    public List<Employee> findByLocationAndDepartment(List<Employee> employees, Location location, Department department) {
+        return employees.stream()
+                .filter(employee -> employee.getLocation().equals(location) && employee.getDepartment().equals(department))
+                .collect(Collectors.toList());
+    }
 }
