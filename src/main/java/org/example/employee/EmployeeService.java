@@ -25,7 +25,7 @@ public interface EmployeeService {
     List<Employee> findByAddress(List<Employee> employees, String address);//
     List<Employee> findByName(List<Employee> employees, String name);
 //    List<Employee> findByDepartment(List<Employee> employees, Department department);
-//    List<Employee> findBySalaryRange(List<Employee> employees, double minSalary, double maxSalary);
+    List<Employee> findBySalaryRange(List<Employee> employees, double minSalary, double maxSalary);
 //    List<Employee> findByAgeRange(List<Employee> employees, int minAge, int maxAge);
 //    List<Employee> findByProject(List<Employee> employees, Project project);
 //    List<Employee> findByLocationAndDepartment(List<Employee> employees, Location location, Department department);

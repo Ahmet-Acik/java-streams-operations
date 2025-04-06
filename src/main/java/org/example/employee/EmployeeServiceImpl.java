@@ -138,4 +138,13 @@ public class EmployeeServiceImpl implements EmployeeService {
                 .filter(employee -> employee.getName().equalsIgnoreCase(name))
                 .collect(Collectors.toList());
     }
+
+
+
+    @Override
+    public List<Employee> findBySalaryRange(List<Employee> employees, double minSalary, double maxSalary) {
+        return employees.stream()
+                .filter(employee -> employee.getSalary() >= minSalary && employee.getSalary() <= maxSalary)
+                .collect(Collectors.toList());
+    }
 }
