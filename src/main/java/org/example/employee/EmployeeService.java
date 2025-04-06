@@ -30,5 +30,5 @@ public interface EmployeeService {
 //    List<Employee> findByProject(List<Employee> employees, Project project);
     List<Employee> findByLocationAndDepartment(List<Employee> employees, Location location, Department department);
     List<Employee> findByLocationAndSalary(List<Employee> employees, Location location, double minSalary, double maxSalary);
-//    List<Employee> findByLocationAndAge(List<Employee> employees, Location location, int minAge, int maxAge);
+    List<Employee> findByLocationAndAge(List<Employee> employees, Location location, int minAge, int maxAge);
 //
