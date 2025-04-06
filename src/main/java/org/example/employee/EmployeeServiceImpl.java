@@ -164,4 +164,11 @@ public class EmployeeServiceImpl implements EmployeeService {
                 .filter(employee -> employee.getLocation().equals(location) && employee.getDepartment().equals(department))
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public List<Employee> findByLocationAndSalary(List<Employee> employees, Location location, double minSalary, double maxSalary) {
+        return employees.stream()
+                .filter(employee -> employee.getLocation().equals(location) && employee.getSalary() >= minSalary && employee.getSalary() <= maxSalary)
+                .collect(Collectors.toList());
+    }
 }
