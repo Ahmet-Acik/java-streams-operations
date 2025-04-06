@@ -147,4 +147,11 @@ public class EmployeeServiceImpl implements EmployeeService {
                 .filter(employee -> employee.getSalary() >= minSalary && employee.getSalary() <= maxSalary)
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public List<Employee> findByAgeRange(List<Employee> employees, int minAge, int maxAge) {
+        return employees.stream()
+                .filter(employee -> employee.getAge() >= minAge && employee.getAge() <= maxAge)
+                .collect(Collectors.toList());
+    }
 }
