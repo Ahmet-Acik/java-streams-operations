@@ -139,7 +139,12 @@ public class EmployeeServiceImpl implements EmployeeService {
                 .collect(Collectors.toList());
     }
 
-
+    @Override
+    public List<Employee> findByDepartment(List<Employee> employees, Department department) {
+        return employees.stream()
+                .filter(employee -> employee.getDepartment().equals(department))
+                .collect(Collectors.toList());
+    }
 
     @Override
     public List<Employee> findBySalaryRange(List<Employee> employees, double minSalary, double maxSalary) {
