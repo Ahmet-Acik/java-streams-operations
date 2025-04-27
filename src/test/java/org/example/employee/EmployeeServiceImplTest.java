@@ -8,6 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.function.BiPredicate;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -193,5 +194,10 @@ class EmployeeServiceImplTest {
     void findByLocationAndAge() {
         List<Employee> result = employeeService.findByLocationAndAge(employees, Location.NEW_YORK, 25, 35);
         assertEquals(2, result.size());
+
+        Employee employee = new Employee("1", "Alice", 30, "Female", "123 Main St", Department.ENGINEERING, 90000, Location.NEW_YORK, Arrays.asList(Project.CLOUD_MIGRATION));
+        BiPredicate<Employee, Integer> agePredicate = (emp, age) -> emp.getAge() > age;
+
+        boolean abc = agePredicate.test(employee, 25); // Returns true because 30 > 25
     }
 }
